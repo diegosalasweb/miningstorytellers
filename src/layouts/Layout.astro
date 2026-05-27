@@ -1,0 +1,142 @@
+---
+export interface Props {
+  title?: string;
+  description?: string;
+}
+const {
+  title = 'Mining Storytellers — Visual Storytelling for the Mining Industry',
+  description = 'World-class photography and documentary storytelling for mining companies, investors, and global media.',
+} = Astro.props;
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content={description} />
+  <title>{title}</title>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+</head>
+<body>
+
+  <!-- NAV -->
+  <header class="nav">
+    <div class="container nav__inner">
+      <a href="/" class="nav__logo">
+        <span class="nav__logo-dot"></span>
+        Mining Storytellers
+      </a>
+
+      <nav>
+        <ul class="nav__links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Work</a></li>
+          <li><a href="#experience">Expertise</a></li>
+          <li><a href="#clients">Clients</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <a href="#contact" class="btn btn-primary nav__cta">Let's Talk</a>
+
+      <button class="nav__hamburger" aria-label="Menu" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- MOBILE NAV OVERLAY -->
+  <div class="mobile-nav" id="mobileNav">
+    <ul>
+      <li><a href="#about"      onclick="closeMobile()">About</a></li>
+      <li><a href="#services"   onclick="closeMobile()">Work</a></li>
+      <li><a href="#experience" onclick="closeMobile()">Expertise</a></li>
+      <li><a href="#clients"    onclick="closeMobile()">Clients</a></li>
+      <li><a href="#contact"    onclick="closeMobile()">Contact</a></li>
+    </ul>
+  </div>
+
+  <slot />
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p class="footer__copy">
+        &copy; {new Date().getFullYear()} <span>Mining Storytellers</span>. All rights reserved.
+      </p>
+      <ul class="footer__links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Work</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </footer>
+
+</body>
+</html>
+
+<style is:global>
+  @import '../styles/global.css';
+
+  .mobile-nav {
+    position: fixed;
+    inset: 0;
+    z-index: 99;
+    background: rgba(19,28,40,0.97);
+    backdrop-filter: blur(20px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s;
+  }
+  .mobile-nav.open {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  .mobile-nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+  }
+  .mobile-nav a {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--text);
+    transition: color 0.2s;
+  }
+  .mobile-nav a:hover { color: var(--accent); }
+</style>
+
+<script>
+  const hamburger  = document.getElementById('hamburger');
+  const mobileNav  = document.getElementById('mobileNav');
+
+  hamburger?.addEventListener('click', () => {
+    mobileNav?.classList.toggle('open');
+  });
+
+  function closeMobile() {
+    mobileNav?.classList.remove('open');
+  }
+  (window as any).closeMobile = closeMobile;
+
+  // Nav scroll effect
+  window.addEventListener('scroll', () => {
+    const nav = document.querySelector('.nav') as HTMLElement;
+    if (!nav) return;
+    if (window.scrollY > 20) {
+      nav.style.background = 'rgba(19,28,40,0.97)';
+    } else {
+      nav.style.background = 'rgba(26,35,50,0.85)';
+    }
+  });
+</script>

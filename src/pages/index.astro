@@ -1,0 +1,486 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const services = [
+  { label: 'Underground Operations',    img: '/images/service-1.png' },
+  { label: 'Open Pit Mining',           img: '/images/service-2.png' },
+  { label: 'Exploration Campaigns',     img: '/images/service-3.png' },
+  { label: 'Community & ESG Stories',   img: '/images/service-4.png' },
+  { label: 'Corporate Portraits',       img: '/images/service-5.png' },
+  { label: 'Documentary Series',        img: '/images/service-6.png' },
+];
+
+const skills = [
+  {
+    icon: '📸',
+    title: 'Photography',
+    desc: 'Editorial, corporate, and documentary photography from surface to 2,000m underground. ISO-certified for underground environments.',
+    num: '500+',
+    numLabel: 'shoots completed',
+  },
+  {
+    icon: '🎬',
+    title: 'Film & Video',
+    desc: 'Short-form documentaries, corporate films, investor reels, and social content. Full production from scripting to grade.',
+    num: '200+',
+    numLabel: 'films produced',
+  },
+  {
+    icon: '✍️',
+    title: 'Copywriting',
+    desc: 'Technical writing, investor communications, sustainability reports, and feature journalism for mining and resources sectors.',
+    num: '12yrs',
+    numLabel: 'industry experience',
+  },
+  {
+    icon: '🌍',
+    title: 'Global Reach',
+    desc: 'Deployed across 4 continents — Africa, Americas, Australasia, and Europe. Logistics, fixers, and local teams arranged.',
+    num: '30+',
+    numLabel: 'countries worked',
+  },
+];
+
+const clients = [
+  { name: 'BHP',                    img: '/images/bhp.png'                  },
+  { name: 'Rio Tinto',              img: '/images/riotinto.png'             },
+  { name: 'Codelco',                img: '/images/codelco.png'              },
+  { name: 'Teck',                   img: '/images/teck.png'                 },
+  { name: 'Antofagasta Minerals',   img: '/images/antofagastaminerals.png'  },
+  { name: 'Los Pelambres',          img: '/images/pelambres.png'            },
+  { name: 'Marimaca',               img: '/images/marimaca.png'             },
+  { name: 'Cenizas',                img: '/images/cenizas.png'              },
+  { name: 'Fundación Chile',        img: '/images/fundacionchile.png'       },
+  { name: 'Bloomberg',              img: '/images/bloomberg.png'            },
+];
+---
+
+<Layout>
+
+  <!-- ═══════════════════════════════════════════
+       HERO
+  ═══════════════════════════════════════════ -->
+  <section class="hero" id="home">
+    <div class="hero__bg"></div>
+    <div class="hero__grid"></div>
+    <div class="container hero__inner">
+
+      <div class="hero__content">
+        <div class="hero__badge">
+          <span>&#9679;</span>
+          Available for projects worldwide
+        </div>
+
+        <h1 class="hero__title">
+          Storytelling<br/>
+          for the<br/>
+          <em>Mining World</em>
+        </h1>
+
+        <p class="hero__desc">
+          We embed with mining operations globally to create photography, film, and
+          editorial content that connects companies with investors, communities, and
+          the world — from underground to boardroom.
+        </p>
+
+        <div class="hero__actions">
+          <a href="#services" class="btn btn-primary">See Our Work</a>
+          <a href="#contact"  class="btn btn-outline">Get in Touch</a>
+        </div>
+
+        <div class="hero__stats">
+          <div class="hero__stat">
+            <div class="hero__stat-num">30+</div>
+            <div class="hero__stat-label">Countries covered</div>
+          </div>
+          <div class="hero__stat">
+            <div class="hero__stat-num">500+</div>
+            <div class="hero__stat-label">Projects delivered</div>
+          </div>
+          <div class="hero__stat">
+            <div class="hero__stat-num">15+</div>
+            <div class="hero__stat-label">Years in mining media</div>
+          </div>
+          <div class="hero__stat">
+            <div class="hero__stat-num">10+</div>
+            <div class="hero__stat-label">Major mining clients</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero__visual">
+        <div class="hero__video-wrap">
+          <!-- Facade: thumbnail + play button. Iframe loads on click. -->
+          <div class="yt-facade" id="ytFacade" data-videoid="9DBAyS0VuSc">
+            <img
+              class="yt-facade__thumb"
+              src="https://img.youtube.com/vi/9DBAyS0VuSc/maxresdefault.jpg"
+              alt="Mining Storytellers — Showreel"
+            />
+            <div class="yt-facade__overlay"></div>
+            <button class="yt-facade__play" aria-label="Play video">
+              <svg viewBox="0 0 68 48" xmlns="http://www.w3.org/2000/svg">
+                <path class="yt-play-bg" d="M66.5 7.7a8.5 8.5 0 0 0-6-6C55.8 0 34 0 34 0S12.2 0 7.5 1.7a8.5 8.5 0 0 0-6 6C0 11.4 0 24 0 24s0 12.6 1.5 16.3a8.5 8.5 0 0 0 6 6C12.2 48 34 48 34 48s21.8 0 26.5-1.7a8.5 8.5 0 0 0 6-6C68 36.6 68 24 68 24s0-12.6-1.5-16.3z"/>
+                <path class="yt-play-arrow" d="M45 24 27 14v20z"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       ABOUT
+  ═══════════════════════════════════════════ -->
+  <section class="section about" id="about">
+    <div class="container about__inner">
+
+      <div class="about__left">
+        <p class="section-label">Why Work With Us</p>
+        <div class="divider"></div>
+        <h2 class="section-title">Mining insiders. <br/>World-class storytellers.</h2>
+        <p class="about__copy">
+          We don't just photograph mines — we understand them. Our team combines
+          deep technical knowledge of mining operations with award-winning
+          photography and film craft.
+        </p>
+        <p class="about__copy">
+          The result? Content that is safe, accurate, operationally credible, and
+          visually outstanding. Content that your team is proud to share, and that
+          your audiences trust.
+        </p>
+
+        <div class="about__values">
+          <div class="about__value">Safety-certified for underground environments</div>
+          <div class="about__value">Technical mining knowledge — no briefing needed</div>
+          <div class="about__value">Full production: concept to final deliverable</div>
+          <div class="about__value">Discreet and professional on-site presence</div>
+          <div class="about__value">Global logistics and local network</div>
+        </div>
+      </div>
+
+      <div class="about__cards">
+
+        <!-- Morten -->
+        <div class="about__card">
+          <div class="about__card-header">
+            <div class="about__avatar">
+              <img
+                src="/images/morten.png"
+                alt="Morten"
+                style="width:100%;height:100%;object-fit:cover;"
+                onerror="this.style.display='none';"
+              />
+              M
+            </div>
+            <div>
+              <h3 class="about__card-name">Morten</h3>
+              <p class="about__card-role">Lead Photographer & Director</p>
+            </div>
+          </div>
+          <p class="about__card-bio">
+            Former mining engineer turned visual journalist. Morten has spent 12 years
+            documenting the global mining industry — from the deep gold mines of South
+            Africa to Arctic copper operations in Canada. His work has appeared in
+            Mining Magazine, The Financial Times, and company annual reports for
+            several of the world's largest producers.
+          </p>
+          <div class="about__card-tags">
+            <span class="about__tag">Underground Photography</span>
+            <span class="about__tag">Documentary Film</span>
+            <span class="about__tag">Investor Relations</span>
+            <span class="about__tag">Africa & Americas</span>
+          </div>
+        </div>
+
+        <!-- Paul -->
+        <div class="about__card">
+          <div class="about__card-header">
+            <div class="about__avatar">
+              <img
+                src="/images/paul.jpg"
+                alt="Paul"
+                style="width:100%;height:100%;object-fit:cover;"
+                onerror="this.style.display='none';"
+              />
+              P
+            </div>
+            <div>
+              <h3 class="about__card-name">Paul</h3>
+              <p class="about__card-role">Writer & Editorial Director</p>
+            </div>
+          </div>
+          <p class="about__card-bio">
+            Mining journalist and technical writer with a background in geology.
+            Paul brings editorial rigour and a storyteller's eye to every project.
+            He has reported from more than 30 countries, covering exploration,
+            development, production, and closure — with bylines in Bloomberg,
+            Engineering & Mining Journal, and industry reports for governments and
+            development banks.
+          </p>
+          <div class="about__card-tags">
+            <span class="about__tag">Technical Writing</span>
+            <span class="about__tag">ESG Reporting</span>
+            <span class="about__tag">Investor Communications</span>
+            <span class="about__tag">Australasia & Europe</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       SERVICES / GALLERY
+  ═══════════════════════════════════════════ -->
+  <section class="section" id="services">
+    <div class="container">
+      <div class="services__header">
+        <p class="section-label">Our Work</p>
+        <div class="divider" style="margin-inline:auto;"></div>
+        <h2 class="section-title">Stories from the ground up</h2>
+        <p class="section-subtitle">
+          Every project is unique. We adapt to your environment, brand, and audience
+          — delivering content that is technically precise and visually compelling.
+        </p>
+      </div>
+
+      <div class="masonry">
+        {services.map((s, i) => (
+          <div class="masonry__item">
+            <img
+              src={s.img}
+              alt={s.label}
+              class="masonry__img"
+              onerror={`this.parentElement.classList.add('placeholder-mode')`}
+            />
+            <div class="masonry__overlay">
+              <span class="masonry__label">{s.label}</span>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       EXPERIENCE
+  ═══════════════════════════════════════════ -->
+  <section class="section experience" id="experience">
+    <div class="container">
+      <p class="section-label">Expertise</p>
+      <div class="divider"></div>
+      <h2 class="section-title">What we bring to every project</h2>
+
+      <div class="experience__grid">
+        {skills.map(s => (
+          <div class="exp__card">
+            <div class="exp__icon">{s.icon}</div>
+            <h3 class="exp__title">{s.title}</h3>
+            <p class="exp__desc">{s.desc}</p>
+            <div class="exp__num">{s.num}</div>
+            <div style="font-size:0.8rem;color:var(--muted);margin-top:4px;">{s.numLabel}</div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       CLIENTS
+  ═══════════════════════════════════════════ -->
+  <section class="section" id="clients">
+    <div class="container">
+      <div class="clients__header">
+        <p class="section-label">Trusted By</p>
+        <div class="divider" style="margin-inline:auto;"></div>
+        <h2 class="section-title">The companies behind the world's metals</h2>
+        <p class="section-subtitle">
+          From junior explorers to tier-one producers, we've worked with companies
+          at every stage of the mining lifecycle.
+        </p>
+      </div>
+
+      <div class="clients__grid">
+        {clients.map(c => (
+          <div class="client__logo">
+            <img src={c.img} alt={c.name} class="client__logo-img" />
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       CONTACT
+  ═══════════════════════════════════════════ -->
+  <section class="section contact" id="contact">
+    <div class="container contact__inner">
+
+      <div>
+        <p class="section-label">Get In Touch</p>
+        <div class="divider"></div>
+        <h2 class="section-title">Let's tell your story</h2>
+        <p class="contact__copy">
+          Planning a campaign, annual report, investor roadshow, or documentary?
+          Tell us about your project and we'll get back to you within 24 hours.
+        </p>
+
+        <div class="contact__links">
+          <a href="mailto:hello@miningstorytellers.com" class="contact__link">
+            <div class="contact__link-icon">✉️</div>
+            <div>
+              <div class="contact__link-label">Email us</div>
+              <div class="contact__link-value">hello@miningstorytellers.com</div>
+            </div>
+          </a>
+
+          <a href="https://linkedin.com/company/miningstorytellers" class="contact__link" target="_blank" rel="noopener">
+            <div class="contact__link-icon">in</div>
+            <div>
+              <div class="contact__link-label">LinkedIn</div>
+              <div class="contact__link-value">Mining Storytellers</div>
+            </div>
+          </a>
+
+          <a href="https://instagram.com/miningstorytellers" class="contact__link" target="_blank" rel="noopener">
+            <div class="contact__link-icon">📷</div>
+            <div>
+              <div class="contact__link-label">Instagram</div>
+              <div class="contact__link-value">@miningstorytellers</div>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="contact__form">
+        <h3 class="contact__form-title">Send us a message</h3>
+        <form name="contact" method="POST" data-netlify="true">
+          <input type="hidden" name="form-name" value="contact" />
+
+          <div class="form__group">
+            <label class="form__label" for="name">Full Name</label>
+            <input class="form__input" type="text" id="name" name="name" placeholder="Your name" required />
+          </div>
+
+          <div class="form__group">
+            <label class="form__label" for="email">Email Address</label>
+            <input class="form__input" type="email" id="email" name="email" placeholder="you@company.com" required />
+          </div>
+
+          <div class="form__group">
+            <label class="form__label" for="company">Company / Project</label>
+            <input class="form__input" type="text" id="company" name="company" placeholder="Company name" />
+          </div>
+
+          <div class="form__group">
+            <label class="form__label" for="message">Tell us about your project</label>
+            <textarea class="form__textarea" id="message" name="message" placeholder="Location, timeline, deliverables..." required></textarea>
+          </div>
+
+          <div style="display:flex;justify-content:center;">
+            <button type="submit" class="btn btn-primary" style="min-width:200px;justify-content:center;">
+              Send Message
+            </button>
+          </div>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+</Layout>
+
+<style>
+  /* Masonry placeholder fallback when images missing */
+  .masonry__item.placeholder-mode .masonry__img {
+    background: var(--bg-card);
+    min-height: 220px;
+  }
+
+  /* ── YouTube Facade ─────────────────────────────── */
+  .yt-facade {
+    position: absolute;
+    inset: 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .yt-facade__thumb {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .yt-facade__overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.25);
+    transition: background 0.2s;
+  }
+
+  .yt-facade:hover .yt-facade__overlay {
+    background: rgba(0, 0, 0, 0.15);
+  }
+
+  .yt-facade__play {
+    position: relative;
+    z-index: 1;
+    background: none;
+    border: none;
+    cursor: pointer;
+    width: 72px;
+    height: 52px;
+    transition: transform 0.2s;
+  }
+
+  .yt-facade:hover .yt-facade__play {
+    transform: scale(1.1);
+  }
+
+  .yt-play-bg {
+    fill: #ff0000;
+    fill-opacity: 0.9;
+    transition: fill-opacity 0.2s;
+  }
+
+  .yt-facade:hover .yt-play-bg {
+    fill-opacity: 1;
+  }
+
+  .yt-play-arrow {
+    fill: #fff;
+  }
+
+  /* Active iframe replaces facade */
+  .hero__video-wrap iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    display: block;
+  }
+</style>
+
+<script>
+  const facade = document.getElementById('ytFacade');
+  if (facade) {
+    facade.addEventListener('click', () => {
+      const videoId = facade.dataset.videoid;
+      const iframe = document.createElement('iframe');
+      iframe.src = `https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1&controls=0&modestbranding=1&rel=0&showinfo=0&iv_load_policy=3&fs=0`;
+      iframe.title = 'Mining Storytellers — Showreel';
+      iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+      iframe.allowFullscreen = true;
+      facade.replaceWith(iframe);
+    });
+  }
+</script>
