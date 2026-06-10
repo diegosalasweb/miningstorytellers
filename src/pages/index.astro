@@ -287,7 +287,7 @@ const clients = [
             <h3 class="exp__title">{s.title}</h3>
             <p class="exp__desc">{s.desc}</p>
             <div class="exp__num">{s.num}</div>
-            <div style="font-size:0.8rem;color:var(--muted);margin-top:4px;">{s.numLabel}</div>
+            {s.numLabel && <div style="font-size:0.78rem;color:var(--muted);margin-top:6px;letter-spacing:0.04em;text-transform:uppercase;">{s.numLabel}</div>}
           </div>
         ))}
       </div>
