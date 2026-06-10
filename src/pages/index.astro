@@ -282,12 +282,17 @@ const clients = [
 
       <div class="experience__grid">
         {skills.map(s => (
-          <div class="exp__card">
-            <div class="exp__icon">{s.icon}</div>
-            <h3 class="exp__title">{s.title}</h3>
-            <p class="exp__desc">{s.desc}</p>
-            <div class="exp__num">{s.num}</div>
-            {s.numLabel && <div style="font-size:0.78rem;color:var(--muted);margin-top:6px;letter-spacing:0.04em;text-transform:uppercase;">{s.numLabel}</div>}
+          <div class="exp__item">
+            <div class="exp__content">
+              <h3 class="exp__title">{s.title}</h3>
+              <p class="exp__desc">{s.desc}</p>
+            </div>
+            {s.num && (
+              <div class="exp__stat">
+                <div class="exp__num">{s.num}</div>
+                {s.numLabel && <div class="exp__label">{s.numLabel}</div>}
+              </div>
+            )}
           </div>
         ))}
       </div>
