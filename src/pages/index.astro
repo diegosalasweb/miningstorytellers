@@ -113,10 +113,15 @@ const clients = [
       <div class="hero__visual">
         <div class="hero__video-wrap">
           <!-- Facade: thumbnail + play button. Iframe loads on click. -->
-          <div class="yt-facade" id="ytFacade" data-videoid="9DBAyS0VuSc">
+          <div
+            class="yt-facade"
+            id="ytFacade"
+            data-cloud="deetpuinn"
+            data-publicid="ppppppppOpKOKK_03-07_Final_Cut_MINING_REEL_PaulXMorten_sfcb6r"
+          >
             <img
               class="yt-facade__thumb"
-              src="https://img.youtube.com/vi/9DBAyS0VuSc/maxresdefault.jpg"
+              src="https://res.cloudinary.com/deetpuinn/video/upload/ppppppppOpKOKK_03-07_Final_Cut_MINING_REEL_PaulXMorten_sfcb6r.jpg"
               alt="Mining Storytellers — Showreel"
             />
             <div class="yt-facade__overlay"></div>
@@ -485,11 +490,12 @@ const clients = [
   const facade = document.getElementById('ytFacade');
   if (facade) {
     facade.addEventListener('click', () => {
-      const videoId = facade.dataset.videoid;
+      const cloud = facade.dataset.cloud;
+      const publicId = facade.dataset.publicid;
       const iframe = document.createElement('iframe');
-      iframe.src = `https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1&controls=0&modestbranding=1&rel=0&showinfo=0&iv_load_policy=3&fs=0`;
+      iframe.src = `https://player.cloudinary.com/embed/?cloud_name=${cloud}&public_id=${publicId}&autoplay=true`;
       iframe.title = 'Mining Storytellers — Showreel';
-      iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+      iframe.allow = 'autoplay; fullscreen; encrypted-media; picture-in-picture';
       iframe.allowFullscreen = true;
       facade.replaceWith(iframe);
     });
