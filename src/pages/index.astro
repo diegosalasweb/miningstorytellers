@@ -121,26 +121,10 @@ const clients = [
 
       <div class="hero__visual">
         <div class="hero__video-wrap">
-          <!-- Facade: thumbnail + play button. Iframe loads on click. -->
-          <div
-            class="yt-facade"
-            id="ytFacade"
-            data-cloud="deetpuinn"
-            data-publicid="ppppppppOpKOKK_03-07_Final_Cut_MINING_REEL_PaulXMorten_sfcb6r"
-          >
-            <img
-              class="yt-facade__thumb"
-              src="https://res.cloudinary.com/deetpuinn/video/upload/ppppppppOpKOKK_03-07_Final_Cut_MINING_REEL_PaulXMorten_sfcb6r.jpg"
-              alt="Mining Storytellers — Showreel"
-            />
-            <div class="yt-facade__overlay"></div>
-            <button class="yt-facade__play" aria-label="Play video">
-              <svg viewBox="0 0 68 48" xmlns="http://www.w3.org/2000/svg">
-                <path class="yt-play-bg" d="M66.5 7.7a8.5 8.5 0 0 0-6-6C55.8 0 34 0 34 0S12.2 0 7.5 1.7a8.5 8.5 0 0 0-6 6C0 11.4 0 24 0 24s0 12.6 1.5 16.3a8.5 8.5 0 0 0 6 6C12.2 48 34 48 34 48s21.8 0 26.5-1.7a8.5 8.5 0 0 0 6-6C68 36.6 68 24 68 24s0-12.6-1.5-16.3z"/>
-                <path class="yt-play-arrow" d="M45 24 27 14v20z"/>
-              </svg>
-            </button>
-          </div>
+          <video poster="https://res.cloudinary.com/deetpuinn/image/upload/v1784714781/portada_reel_1_vpxxsi.png" style="width: 100%; height: auto; border-radius: 8px; display: block; object-fit: cover;" controls>
+            <source src="https://res.cloudinary.com/deetpuinn/video/upload/v1784075387/ppppppppOpKOKK_03-07_Final_Cut_MINING_REEL_PaulXMorten_sfcb6r.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
         </div>
       </div>
 
@@ -285,17 +269,32 @@ const clients = [
 
       <h3 style="font-size: 2rem; margin: 4rem 0 2rem; color: var(--text);">Our Work in Video</h3>
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-bottom: 4rem;">
-        <div style="position: relative; width: 100%; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 8px;">
-          <video style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;" controls>
-            <source src="https://res.cloudinary.com/deetpuinn/video/upload/v1784022541/2_AHS_Trucks_Caterpillar_faixja.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
+        <div>
+          <h4 style="color: var(--text); margin-bottom: 1rem; font-size: 1.1rem;">Freeport McRogan - El Abra</h4>
+          <div style="position: relative; width: 100%; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 8px;">
+            <video poster="https://res.cloudinary.com/deetpuinn/image/upload/v1784693989/portada_el_abra_ydzb8b.png" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;" controls>
+              <source src="https://res.cloudinary.com/deetpuinn/video/upload/v1784020229/VIDEO_EL_ALBA_30_AN%CC%83OS_13_ENERO_k78zlt.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
         </div>
-        <div style="position: relative; width: 100%; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 8px;">
-          <video style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;" controls>
-            <source src="https://res.cloudinary.com/deetpuinn/video/upload/v1784020229/VIDEO_EL_ALBA_30_AN%CC%83OS_13_ENERO_k78zlt.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
+        <div>
+          <h4 style="color: var(--text); margin-bottom: 1rem; font-size: 1.1rem;">Teck Corporativo</h4>
+          <div style="position: relative; width: 100%; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 8px;">
+            <video poster="https://res.cloudinary.com/deetpuinn/image/upload/v1784693990/portada_teck_mdwwbe.png" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;" controls>
+              <source src="https://res.cloudinary.com/deetpuinn/video/upload/v1784692799/000video_enrique_castro_completo___12_octubre_1080p_fsc0l9.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+        <div>
+          <h4 style="color: var(--text); margin-bottom: 1rem; font-size: 1.1rem;">Caterpillar</h4>
+          <div style="position: relative; width: 100%; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 8px;">
+            <video poster="https://res.cloudinary.com/deetpuinn/image/upload/v1784693989/portada_caterpillar_ekitkf.png" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;" controls>
+              <source src="https://res.cloudinary.com/deetpuinn/video/upload/v1784022499/2_AHS_Trucks_Caterpillar_pfyrow.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
         </div>
       </div>
     </div>
@@ -370,11 +369,11 @@ const clients = [
         </p>
 
         <div class="contact__links">
-          <a href="mailto:hello@miningstorytellers.com" class="contact__link">
+          <a href="mailto:miningstorytellers@gmail.com" class="contact__link">
             <div class="contact__link-icon">✉️</div>
             <div>
               <div class="contact__link-label">Email us</div>
-              <div class="contact__link-value">hello@miningstorytellers.com</div>
+              <div class="contact__link-value">miningstorytellers@gmail.com</div>
             </div>
           </a>
 
