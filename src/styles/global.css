@@ -545,6 +545,9 @@ a  { color: inherit; text-decoration: none; }
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
   }
+  .masonry__item:last-child {
+    display: none;
+  }
 }
 
 /* ─── Experience ────────────────────────────────────────────────── */
